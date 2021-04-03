@@ -1,0 +1,28 @@
+<header>
+<h1>{{title}}</h1>
+</header>
+<main>
+<div class="buttons">
+<a href="/edit">{{addItem}}</a>
+<a href="/edit">{{viewItem}}</a>
+<a href="/edit">{{editItem}}</a>
+<a href="/edit">{{deleteItem}}</a>
+</div>
+<div class="lists">
+    <div class="list-header">
+        <div  *ngFor = 'let item of listHeader'>
+        <div>{{item}}</div>
+     
+    </div>
+    </div>
+    <ul>
+    <li on-click = 'onSelect(list)' class="list-item" *ngFor = 'let list of lists'>
+        <div>{{list.firstName}}</div>
+        <div>{{list.lastName}}</div>
+        <div>{{list.patronymic}}</div>
+        <div>{{list.count}} </div>
+    </li>
+</ul>
+</div>
+
+</main>

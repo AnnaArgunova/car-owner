@@ -1,0 +1,41 @@
+ul{
+    padding: 0%;
+    margin: 0%;
+}
+
+li{
+    list-style: none;
+}
+
+.list-header,
+.list-item {
+    display: flex;
+    justify-content: flex-start;
+
+}
+
+.list-header div,
+.list-item div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    border: 1px solid grey;
+    height: 2vw;
+}
+
+.buttons{
+    display: flex;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7vw;
+    height: 1vw;
+    background: rgb(206, 204, 204);
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    margin: 0.3vw;
+}

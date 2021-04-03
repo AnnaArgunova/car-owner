@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "projects": {
+    "auto": {
+      "projectType": "application",
+      "root": "",
+      "sourceRoot": "src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/auto",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.json",
+            "aot": true
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "auto:build"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "auto",
+  "cli": {
+    "analytics": "1f074a2c-89e6-4580-9439-4eb3ab742a80"
+  }
+}
