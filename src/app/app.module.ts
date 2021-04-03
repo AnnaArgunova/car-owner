@@ -6,7 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { InMemoryDataService } from 'in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { ListsService } from './lists.service';
+import { carOwnersService } from './carOwners.service';
 //import { routes } from './app-routing.module';
 import { ListsComponent } from './lists/lists.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,6 @@ import { EditComponent } from './edit/edit.component';
         AppRoutingModule],
     declarations: [AppComponent, ListsComponent, EditComponent],
     bootstrap: [AppComponent],
-    providers: [ListsService]
+    providers: [carOwnersService]
 })
 export class AppModule { }

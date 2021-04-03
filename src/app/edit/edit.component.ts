@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ListsService } from '../lists.service';
+import { carOwnersService } from '../carOwners.service';
 import { HttpClient } from '@angular/common/http';
 import {List} from '../list';
 @Component({
@@ -32,12 +32,12 @@ export class EditComponent implements OnInit {
 submit(){
 
 }
-  constructor(private http: HttpClient, private ListsService: ListsService) {
+  constructor(private http: HttpClient, private carOwnersService: carOwnersService) {
    
    }
 
   ngOnInit(): void {
-    this.ListsService.getOwners().subscribe((data: List) =>
+    this.carOwnersService.getOwners().subscribe((data: List) =>
     this.lists = data
    
     

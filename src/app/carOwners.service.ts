@@ -5,7 +5,7 @@ import{List} from './list'
 @Injectable({
   providedIn: 'root'
 })
-export class ListsService {
+export class carOwnersService {
   
   getOwners(){
     return this.http.get('api/lists')

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, EventEmitter,Output } from '@angular/core';
 import { List } from '../list';
-import { ListsService } from '../lists.service';
+import { carOwnersService } from '../carOwners.service';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -28,12 +28,12 @@ export class ListsComponent implements OnInit {
     console.log('selectedId',this.selectedId);
   }
 
-  constructor(private http: HttpClient, private ListsService: ListsService) {
+  constructor(private http: HttpClient, private carOwnersService: carOwnersService) {
 
   }
 
   ngOnInit(): void {
-    this.ListsService.getOwners().subscribe((data: List) =>
+    this.carOwnersService.getOwners().subscribe((data: List) =>
       this.lists = data
     )
   
